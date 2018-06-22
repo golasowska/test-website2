@@ -1,8 +1,20 @@
 /* GLOBAL */
+
+@font-face {
+  font-family: 'Segoe';
+  src: url('../fonts/segoe-ui-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Light';
+  src: url('../fonts/SourceSansPro-Light.woff') format('truetype');
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Segoe';
 }
 /* NAVBAR */
 
@@ -19,10 +31,10 @@
   justify-content: space-between;
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .li-nav {
-  display: inline-block;
   font-size: 18px;
   border-bottom: 7px solid transparent;
 }
@@ -32,10 +44,8 @@
 }
 
 .li-nav:hover {
-  border-bottom-style: solid;
-  border-bottom-width: 7px;
-  border-bottom-color: red;
   transition: 0.3s ease-in-out;
+  border-image: url('../images/prostokat-1392.png') 50 round;
 }
 
 .logo-header {
@@ -48,6 +58,27 @@
 .logo-center {
   width: 20%;
   display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .menu-nav {
+    height: 100%;
+  }
+
+  .menu-list {
+    display: block;
+    width: 60%;
+    max-height: 100%;
+    flex-wrap: wrap;
+  }
+
+  .li-nav {
+    display: inline-block;
+  }
+
+  .li-nav:last-child {
+    margin-right: 10px;
+  }
 }
 
 /* BANNER */
@@ -110,6 +141,7 @@
   position: relative;
   height: 379px;
   background: #fff;
+  border-bottom: 1px solid #707070;
 }
 
 .boks p:nth-child(2) {
@@ -132,6 +164,12 @@
   right: 13px;
 }
 
+.btn-plus:hover {
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
 /* GALLERY */
 
 .row-gallery {
@@ -142,6 +180,10 @@
   font-size: 45px;
   margin: 0;
   padding: 0;
+}
+
+.gallery-name {
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .gradient {
