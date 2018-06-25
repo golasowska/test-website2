@@ -141,7 +141,7 @@
   position: relative;
   height: 379px;
   background: #fff;
-  border-bottom: 1px solid #c4c4c4;
+  border: 1px solid #c4c4c4;
 }
 
 .boks p:nth-child(2) {
@@ -289,6 +289,24 @@
 }
 
 /* RWD QUERIES */
+
+@media (max-width: 767px) {
+  .li-nav {
+    padding-right: 1rem;
+  }
+  .img-main-container {
+    padding-right: 0;
+  }
+  .image-main {
+    height: 300px;
+  }
+  .footer-bottom {
+    min-height: 120px;
+  }
+  .footer-bottom p {
+    margin-right: 0;
+  }
+}
 
 @media (min-width: 1200px) {
   .container {
